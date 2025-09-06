@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jannah — Lip love in every swipe!</title>
+    <meta name="description" content="Barbie-inspired glosses with ultra shine. Shop best sellers, reviews, and exclusive offers.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Variables */
+        :root {
+            --pink-berry: #CF0068;
+            --pink-hot: #FF0381;
+            --pink-rose: #FF369B;
+            --pink-blush: #FF9CCE;
+            --pink-cotton: #FFCFE7;
+            --white: #FFFFFF;
+            --radius: 24px;
+            --shadow: 0 10px 30px rgba(207, 0, 104, 0.15);
+            --transition: all 0.3s ease;
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--pink-berry);
+            background-color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        /* Text Utilities */
+        .glow-text {
+            color: var(--pink-hot);
+            text-shadow: 0 0 14px rgba(255, 3, 129, 0.55), 0 0 30px rgba(255, 54, 155, 0.45);
+        }
+
+        .script-font {
+            font-family: 'Pacifico', cursive;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--pink-hot);
+            color: var(--white);
+            border-radius: 50px;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            height: 52px;
+            line-height: 24px;
+            text-align: center;
+        }
+
+        .btn.glow-btn {
+            box-shadow: 0 0 18px rgba(255, 3, 129, 0.55);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 24px rgba(255, 3, 129, 0.7);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--pink-hot);
+            color: var(--pink-hot);
+        }
+
+        /* Top Social Bar */
+        .top-bar {
+            background: var(--pink-cotton);
+            padding: 8px 0;
+            text-align: right;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 16px;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-icons a {
+            color: var(--pink-berry);
+            font-size: 18px;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.05);
+            color: var(--pink-hot);
+            text-shadow: 0 0 10px rgba(255, 3, 129, 0.4);
+        }
+
+        /* Header */
+        .header {
+            background: var(--white);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .header.shrink {
+            padding: 10px 0;
+        }
+
+        .header.shrink .logo {
+            font-size: 2rem;
+        }
+
+        .header-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5rem;
+            color: var(--pink-hot);
+            transition: var(--transition);
+            text-shadow: 0 0 14px rgba(255, 3, 129, 0.55), 0 0 30px rgba(255, 54, 155, 0.45);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--pink-hot);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--pink-hot);
+            box-shadow: 0 0 8px rgba(255, 3, 129, 0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:  url('1000002594.jpg') center/cover no-repeat;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            margin-bottom: 8px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 32px;
+            font-weight: 400;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .btn-pulse:hover {
+            animation: pulse 1s infinite;
+        }
+
+        /* Promo Strip */
+        .promo-strip {
+            background: var(--pink-rose);
+            color: var(--white);
+            text-align: center;
+            padding: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .promo-strip:hover {
+            background: var(--pink-hot);
+        }
+
+        /* Split Feature Section */
+        .split-section {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .best-seller {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 500px;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .best-seller-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('1000001579.jpg') center/cover no-repeat;
+            z-index: -1;
+        }
+
+        .best-seller-overlay {
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            padding: 30px;
+            color: var(--white);
+            width: 100%;
+        }
+
+        .best-seller-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--pink-berry);
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .best-seller-ribbon {
+            position: absolute;
+            top: 20px;
+            right: -40px;
+            background: var(--pink-hot);
+            color: var(--white);
+            padding: 8px 40px;
+            transform: rotate(45deg);
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .categories {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .category-chip {
+            padding: 8px 16px;
+            border: 2px solid var(--pink-hot);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .category-chip.active {
+            background: var(--pink-hot);
+            color: var(--white);
+        }
+
+        .category-chip:hover {
+            background: var(--pink-hot);
+            color: var(--white);
+        }
+
+        .product-card {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(207, 0, 104, 0.2);
+        }
+
+        .product-image {
+            height: 200px;
+            background: var(--pink-cotton);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 16px;
+        }
+
+        .product-name {
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .product-price {
+            color: var(--pink-berry);
+            font-weight: 700;
+        }
+
+        .heart-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: var(--white);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 2;
+        }
+
+        .heart-btn:hover {
+            background: var(--pink-cotton);
+        }
+
+        .heart-btn i {
+            color: var(--pink-berry);
+            transition: var(--transition);
+        }
+
+        .heart-btn.active i {
+            color: var(--pink-hot);
+        }
+
+        /* Models Section */
+        .models-section {
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .models-slider {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius);
+            height: 400px;
+        }
+
+        .model-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .model-slide.active {
+            opacity: 1;
+        }
+
+        .model-info {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 16px;
+            border-radius: var(--radius);
+            margin-bottom: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .model-shade {
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--pink-cotton);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .dot.active {
+            background: var(--pink-hot);
+            transform: scale(1.2);
+        }
+
+        /* Reviews Section */
+        .reviews-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        .review-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--pink-cotton);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--pink-berry);
+        }
+
+        .reviewer-info {
+            flex: 1;
+        }
+
+        .reviewer-name {
+            font-weight: 700;
+        }
+
+        .verified {
+            color: var(--pink-hot);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .stars {
+            color: #FFD700;
+            margin: 8px 0;
+        }
+
+        .review-shade {
+            color: var(--pink-berry);
+            font-style: italic;
+            margin-top: 8px;
+        }
+
+        .see-all-reviews {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* Sale Section */
+        .sale-section {
+            text-align: center;
+            padding: 60px 20px;
+            border-radius: var(--radius);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sale-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('1000002592.jpg') center/cover no-repeat;
+            opacity: 0.7;
+            z-index: -1;
+        }
+
+        .sale-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--pink-cotton);
+            z-index: -2;
+        }
+
+        .sale-title {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .sale-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .sale-products {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .sale-product {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .sale-badge {
+            background: var(--pink-berry);
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            z-index: 2;
+        }
+
+        .sale-price {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        .discounted-price {
+            color: var(--pink-berry);
+            font-weight: 700;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin: 30px 0;
+        }
+
+        .countdown-item {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 12px;
+            min-width: 70px;
+            box-shadow: var(--shadow);
+        }
+
+        .countdown-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--pink-hot);
+        }
+
+        .countdown-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--pink-berry);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-inner {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .footer-logo {
+            font-family: 'Pacifico', cursive;
+            font-size: 2rem;
+            margin-bottom: 16px;
+            text-shadow: 0 0 14px rgba(255, 3, 129, 0.55), 0 0 30px rgba(255, 54, 155, 0.45);
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .footer-link-section h4 {
+            margin-bottom: 16px;
+            font-size: 1.2rem;
+        }
+
+        .footer-links-list li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links-list a {
+            transition: var(--transition);
+        }
+
+        .footer-links-list a:hover {
+            color: var(--pink-cotton);
+        }
+
+        .newsletter h4 {
+            margin-bottom: 16px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 50px;
+            font-family: inherit;
+        }
+
+        .newsletter-input:focus {
+            outline: 2px solid var(--pink-hot);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .footer-social a {
+            color: var(--white);
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .footer-social a:hover {
+            color: var(--pink-cotton);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 40px;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Confetti effect */
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: var(--pink-hot);
+            opacity: 0;
+            pointer-events: none;
+            animation: confetti-fall 5s linear forwards;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive Styles */
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 3.5rem;
+            }
+            
+            .header-inner {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            
+            .split-section {
+                flex-direction: row;
+            }
+            
+            .best-seller {
+                flex: 1;
+            }
+            
+            .product-grid-container {
+                flex: 1;
+            }
+            
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .reviews-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .sale-products {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .footer-inner {
+                grid-template-columns: 2fr 1fr 1fr;
+            }
+            
+            .footer-links {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            /* Hide close button on desktop */
+            .close-menu {
+                display: none;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .product-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .reviews-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .models-slider {
+                height: 500px;
+            }
+        }
+
+        /* Mobile Nav */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--pink-hot);
+            cursor: pointer;
+        }
+
+        @media (max-width: 767px) {
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            
+            .nav-menu {
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                background: var(--white);
+                width: 70%;
+                height: 100vh;
+                padding: 80px 20px 20px;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                transition: right 0.3s ease;
+                z-index: 99;
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .close-menu {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+                color: var(--pink-berry);
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Social Bar -->
+    <div class="top-bar">
+        <div class="social-icons">
+            <a href="https://www.instagram.com/medugu_jannah?igsh=MWltMGhuaDJsMndieg=="><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="#" class="logo">Jannah's Gloss</a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul class="nav-menu" id="navMenu">
+                        <button class="close-menu" id="closeMenu">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <li><a href="#" class="nav-link active">Shop</a></li>
+                        <li><a href="#" class="nav-link">Reviews</a></li>
+                        <li><a href="#" class="nav-link">Offers</a></li>
+                        <li><a href="#" class="nav-link">Collection</a></li>
+                        <li><a href="#" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title script-font glow-text">Lip love in every swipe!</h1>
+            <p class="hero-subtitle">(lip gloss)</p>
+            <a href="#" class="btn glow-btn btn-pulse">Shop now</a>
+        </div>
+    </section>
+
+    <!-- Promo Strip -->
+    <div class="promo-strip">
+        <p>Shop now for exclusive offers and deals.</p>
+    </div>
+
+    <!-- Split Feature Section -->
+    <section class="section">
+        <div class="container">
+            <div class="split-section">
+                <!-- Best Seller -->
+                <div class="best-seller">
+                    <div class="best-seller-bg"></div>
+                    <div class="best-seller-badge">our best seller</div>
+                    <div class="best-seller-ribbon">#1 Pick</div>
+                    <div class="best-seller-overlay">
+                        <h3>Crystal Clear</h3>
+                        <p>The gloss that broke the internet—non-sticky, ultra-shine.</p>
+                        <p class="product-price">₦14,000</p>
+                        <a href="#" class="btn">Shop</a>
+                    </div>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="product-grid-container">
+                    <div class="categories">
+                        <div class="category-chip active" data-category="all">All</div>
+                        <div class="category-chip" data-category="nude">Nude</div>
+                        <div class="category-chip" data-category="glitter">Glitter</div>
+                        <div class="category-chip" data-category="plumping">Plumping</div>
+                        <div class="category-chip" data-category="clear">Clear</div>
+                        <div class="category-chip" data-category="limited">Limited</div>
+                    </div>
+
+                    <div class="product-grid">
+                        <!-- Product 1 -->
+                        <div class="product-card" data-category="nude">
+                            <div class="product-image">
+                                <img src="1000001577.jpg" alt="Pink Sparkle Lip Gloss">
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Pink Sparkle</h4>
+                                <p class="product-price">₦12,000</p>
+                            </div>
+                            <div class="heart-btn">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="product-card" data-category="glitter">
+                            <div class="product-image">
+                                <img src="1000001578.jpg" alt="Berry Shine Lip Gloss">
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Berry Shine</h4>
+                                <p class="product-price">₦12,000</p>
+                            </div>
+                            <div class="heart-btn">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="product-card" data-category="clear">
+                            <div class="product-image">
+                                <img src="1000001579.jpg" alt="Crystal Clear Lip Gloss">
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Crystal Clear</h4>
+                                <p class="product-price">₦14,000</p>
+                            </div>
+                            <div class="heart-btn">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+
+                        <!-- Product 4 -->
+                        <div class="product-card" data-category="plumping">
+                            <div class="product-image">
+                                <img src="1000001580.jpg" alt="Ruby Glow Lip Gloss">
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Ruby Glow</h4>
+                                <p class="product-price">₦12,000</p>
+                            </div>
+                            <div class="heart-btn">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Models View Section -->
+    <section class="section models-section">
+        <div class="container">
+            <h2 class="section-title">Models view</h2>
+            <div class="models-slider">
+                <!-- Slide 1 -->
+                <div class="model-slide active" style="background-image: url('1000002589.jpg');">
+                    <div class="model-info">
+                        <h4 class="model-shade">Pink Sparkle</h4>
+                        <a href="#" class="btn btn-outline">Shop shade</a>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="model-slide" style="background-image: url('1000002590.jpg');">
+                    <div class="model-info">
+                        <h4 class="model-shade">Berry Shine</h4>
+                        <a href="#" class="btn btn-outline">Shop shade</a>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="model-slide" style="background-image: url('1000002588.jpg');">
+                    <div class="model-info">
+                        <h4 class="model-shade">Crystal Clear</h4>
+                        <a href="#" class="btn btn-outline">Shop shade</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-dots">
+                <div class="dot active" data-slide="0"></div>
+                <div class="dot" data-slide="1"></div>
+                <div class="dot" data-slide="2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Customer Reviews</h2>
+            <div class="reviews-container">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Amina A.</div>
+                            <div class="verified">
+                                <i class="fas fa-check-circle"></i> Verified Purchase
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">So glossy without the stick!</p>
+                    <p class="review-shade">Shade: Pink Sparkle</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Faith T.</div>
+                            <div class="verified">
+                                <i class="fas fa-check-circle"></i> Verified Purchase
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">Lasts all day and feels amazing!</p>
+                    <p class="review-shade">Shade: Berry Shine</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Alby.</div>
+                            <div class="verified">
+                                <i class="fas fa-check-circle"></i> Verified Purchase
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="review-text">Perfect subtle shine for everyday wear.</p>
+                    <p class="review-shade">Shade: Crystal Clear</p>
+                </div>
+            </div>
+
+            <div class="see-all-reviews">
+                <a href="#" class="btn btn-outline">See all reviews</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sale Section -->
+    <section class="section">
+        <div class="container">
+            <div class="sale-section">
+                <h2 class="sale-title script-font glow-text">SALE</h2>
+                <p class="sale-subtitle">— up to 30% off selected glosses. Limited time. Shop the shine.</p>
+
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="days">02</div>
+                        <div class="countdown-label">Days</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="hours">12</div>
+                        <div class="countdown-label">Hours</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="minutes">45</div>
+                        <div class="countdown-label">Mins</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="seconds">30</div>
+                        <div class="countdown-label">Secs</div>
+                    </div>
+                </div>
+
+                <div class="sale-products">
+                    <!-- Sale Product 1 -->
+                    <div class="sale-product">
+                        <div class="product-image" style="position: relative;">
+                            <img src="1000001579.jpg" alt="Pink Sparkle Lip Gloss - On Sale">
+                            <div class="sale-badge">Sale</div>
+                        </div>
+                        <div class="product-info">
+                            <h4 class="product-name">Pink Sparkle</h4>
+                            <div class="sale-price">
+                                <span class="original-price">₦14,000</span>
+                                <span class="discounted-price">₦9,000</span>
+                            </div>
+                            <a href="#" class="btn">Add to Cart</a>
+                        </div>
+                    </div>
+
+                    
+
+                    <!-- Sale Product 3 -->
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-about">
+                    <div class="footer-logo">Jannah's Gloss</div>
+                    <p>Barbie-inspired glosses with ultra shine. Shop best sellers, reviews, and exclusive offers.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/medugu_jannah?igsh=MWltMGhuaDJsMndieg=="><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-link-section">
+                        <h4>Shop</h4>
+                        <ul class="footer-links-list">
+                            <li><a href="#">All Products</a></li>
+                            <li><a href="#">Best Sellers</a></li>
+                            <li><a href="#">New Arrivals</a></li>
+                            <li><a href="#">Sale</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-link-section">
+                        <h4>Help</h4>
+                        <ul class="footer-links-list">
+                            <li><a href="#">Shipping & Returns</a></li>
+                            <li><a href="#">Track Order</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-link-section">
+                        <h4>Company</h4>
+                        <ul class="footer-links-list">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="newsletter">
+                    <h4>Join the Gloss Gang</h4>
+                    <p>Subscribe to get exclusive offers and news first!</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 Jannah. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const closeMenu = document.getElementById('closeMenu');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.add('active');
+        });
+        
+        closeMenu.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+        });
+
+        // Sticky Header
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('shrink');
+            } else {
+                header.classList.remove('shrink');
+            }
+        });
+
+        // Category Filtering
+        const categoryChips = document.querySelectorAll('.category-chip');
+        const productCards = document.querySelectorAll('.product-card');
+        
+        categoryChips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                // Remove active class from all chips
+                categoryChips.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked chip
+                chip.classList.add('active');
+                
+                const category = chip.getAttribute('data-category');
+                
+                // Show/hide products based on category
+                productCards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Heart Button Toggle with Confetti
+        const heartButtons = document.querySelectorAll('.heart-btn');
+        heartButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const icon = this.querySelector('i');
+                
+                if (this.classList.contains('active')) {
+                    icon.classList.remove('far');
+                    icon.classList.add('fas');
+                    createConfetti();
+                } else {
+                    icon.classList.remove('fas');
+                    icon.classList.add('far');
+                }
+                
+                // Save state to localStorage
+                const productCard = this.closest('.product-card');
+                const productId = Array.from(productCard.parentNode.children).indexOf(productCard);
+                localStorage.setItem(`product-${productId}`, this.classList.contains('active'));
+            });
+        });
+
+        // Load saved heart states
+        document.addEventListener('DOMContentLoaded', () => {
+            const productCards = document.querySelectorAll('.product-card');
+            productCards.forEach((card, index) => {
+                const isLiked = localStorage.getItem(`product-${index}`);
+                if (isLiked === 'true') {
+                    const heartBtn = card.querySelector('.heart-btn');
+                    heartBtn.classList.add('active');
+                    const icon = heartBtn.querySelector('i');
+                    icon.classList.remove('far');
+                    icon.classList.add('fas');
+                }
+            });
+        });
+
+        // Confetti Effect
+        function createConfetti() {
+            const confettiCount = 20;
+            const container = document.querySelector('body');
+            
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                
+                const colorIndex = Math.floor(Math.random() * 5);
+                const colors = [
+                    'var(--pink-hot)',
+                    'var(--pink-berry)',
+                    'var(--pink-rose)',
+                    'var(--pink-blush)',
+                    'var(--pink-cotton)'
+                ];
+                
+                confetti.style.backgroundColor = colors[colorIndex];
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.width = Math.random() * 10 + 5 + 'px';
+                confetti.style.height = confetti.style.width;
+                confetti.style.animationDuration = Math.random() * 3 + 2 + 's';
+                
+                container.appendChild(confetti);
+                
+                setTimeout(() => {
+                    confetti.remove();
+                }, 5000);
+            }
+        }
+
+        // Model Slider
+        const slides = document.querySelectorAll('.model-slide');
+        const dots = document.querySelectorAll('.dot');
+        let currentSlide = 0;
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[n].classList.add('active');
+            dots[n].classList.add('active');
+            currentSlide = n;
+        }
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                const slideIndex = parseInt(this.getAttribute('data-slide'));
+                showSlide(slideIndex);
+            });
+        });
+
+        // Auto slide
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }, 5000);
+
+        // Countdown Timer
+        function updateCountdown() {
+            const days = document.getElementById('days');
+            const hours = document.getElementById('hours');
+            const minutes = document.getElementById('minutes');
+            const seconds = document.getElementById('seconds');
+            
+            // Set the date we're counting down to (3 days from now)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 3);
+            
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+            
+            days.innerHTML = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+            hours.innerHTML = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+            minutes.innerHTML = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+            seconds.innerHTML = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, '0');
+        }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
